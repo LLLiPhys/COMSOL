@@ -1,4 +1,4 @@
-### Use COMSOL to simulate electronic and optical properties of low-dimensional semiconductors
+### Modeling electronic and optical properties of low-dimensional semiconductors using COMSOL
 
 - Electronic properties of semiconductor quantum dots 
 
