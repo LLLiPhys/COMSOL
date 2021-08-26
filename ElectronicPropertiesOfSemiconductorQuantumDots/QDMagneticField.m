@@ -39,7 +39,9 @@ mes=0.067; % Electron effective mass [m0]
 %betae=hwce/alfae;
 %gamae=hw0e/alfae;
 
-me=zeros(nB,nm,nn);ne=zeros(nB,nm,nn);ee=zeros(nB,nm,nn);ue=zeros(nB,nm,nn,nx);
+me=zeros(nB,nm,nn);ne=zeros(nB,nm,nn);
+ee=zeros(nB,nm,nn);ue=zeros(nB,nm,nn,nx);
+
 for iB=1:nB
     B=Blist(iB);
     hw0e=hw0/mes/R^2;
@@ -120,6 +122,8 @@ end
 B=zeros(nB,1);B(1:nB)=Blist(1:nB);
 Emin=0;Emax=50;
 
+plot(B,ee(:,:),'r-',B,Ee(:,:),'b--','linewidth',2);
+axis square;axis([Bmin Bmax Emin Emax]);
 
 %%% Eigensolver using FEM in COMSOL
 
@@ -195,6 +199,5 @@ fem.sol=femeig(fem,'solcomp',{'u'},'outcomp',{'u'},'blocksize','auto','neigs',50
 %fem0=fem;
 
 end
-plot(B,ee(:,:),'r-',B,Ee(:,:),'b--','linewidth',2);
-axis square;axis([Bmin Bmax Emin Emax]);
+
 
