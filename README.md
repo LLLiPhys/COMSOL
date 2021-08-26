@@ -1,4 +1,4 @@
-### Modeling electronic and optical properties of low-dimensional semiconductors using COMSOL
+### Modeling electronic and optical properties of low-dimensional semiconductors using COMSOL and MATLAB
 
 - Electronic properties of semiconductor quantum dots 
 
